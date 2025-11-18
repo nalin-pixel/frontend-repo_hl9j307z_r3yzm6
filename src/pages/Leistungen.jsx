@@ -45,14 +45,16 @@ export default function Leistungen() {
   return (
     <main className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
       <header className="mb-10">
+        <div className="inline-block mb-3 h-1 w-10 bg-[#0D2A4A]" />
         <h1 className="text-3xl md:text-4xl font-semibold text-slate-900">Leistungen</h1>
         <p className="mt-4 text-slate-700 max-w-3xl">Ich decke alles ab, was mit Standsicherheit im Hochbau zu tun hat – vom kleinen Wanddurchbruch bis zum Gewerbebau. Kein Tunnel- oder Brückenbau.</p>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s) => (
-          <div key={s.title} className="bg-white border border-slate-200 rounded-xl p-6">
-            <h2 className="text-xl font-semibold text-slate-900">{s.title}</h2>
+          <div key={s.title} className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-sm hover:-translate-y-0.5 transition-all">
+            <div className="h-1 w-10 bg-slate-200 rounded" />
+            <h2 className="mt-4 text-lg font-semibold text-slate-900">{s.title}</h2>
             <p className="text-slate-700 mt-2">{s.desc}</p>
             <p className="text-sm text-slate-500 mt-3">Typische Beispiele:</p>
             <ul className="mt-2 space-y-1 text-slate-700 list-disc pl-5">
@@ -63,7 +65,7 @@ export default function Leistungen() {
       </div>
 
       <div className="mt-12">
-        <a href="/kontakt" className="inline-flex items-center px-5 py-3 rounded-md bg-blue-900 text-white hover:bg-blue-800">Unverbindlich anfragen</a>
+        <a href="/kontakt" className="inline-flex items-center px-5 py-3 rounded-md bg-[#0D2A4A] text-white hover:bg-[#123557] shadow-sm">Unverbindlich anfragen</a>
       </div>
 
       {/* Referenzen Platzhalter */}
@@ -72,7 +74,7 @@ export default function Leistungen() {
         <p className="text-slate-700 mt-2 max-w-3xl">Hier werden künftig ausgewählte Projekte mit Bildern und Kurzbeschreibungen vorgestellt, zum Beispiel Leuchtturm-Projekte im Holzbau oder der Umbau besonderer Bestandsgebäude.</p>
         <div className="mt-6 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {[1,2,3].map((i)=> (
-            <div key={i} className="aspect-video bg-slate-100 rounded-lg border border-slate-200 flex items-center justify-center text-slate-400">Projekt {i}</div>
+            <div key={i} className="aspect-video bg-slate-50 rounded-lg border border-slate-200 flex items-center justify-center text-slate-400">Projekt {i}</div>
           ))}
         </div>
       </section>
